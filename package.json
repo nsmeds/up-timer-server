@@ -1,0 +1,23 @@
+{
+  "name": "uptimer",
+  "version": "1.0.0",
+  "description": "A library for managing monitors via the Uptime Robot API.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nsmeds/uptimer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nsmeds/uptimer/issues"
+  },
+  "homepage": "https://github.com/nsmeds/uptimer#readme",
+  "dependencies": {
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  }
+}
