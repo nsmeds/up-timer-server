@@ -18,6 +18,7 @@
   "homepage": "https://github.com/nsmeds/uptimer#readme",
   "dependencies": {
     "express": "^4.15.3",
+    "node-cron": "^1.2.0",
     "request": "^2.81.0"
   }
 }
