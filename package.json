@@ -4,7 +4,7 @@
   "description": "A library for managing monitors via the Uptime Robot API.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,10 @@
     "express": "^4.15.3",
     "node-cron": "^1.2.0",
     "request": "^2.81.0"
+  },
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0",
+    "morgan": "^1.8.2"
   }
 }
