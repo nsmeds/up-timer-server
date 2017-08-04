@@ -7,7 +7,8 @@
   "description": "A library for managing monitors via the Uptime Robot API.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test"
+    "test": "mocha test",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
