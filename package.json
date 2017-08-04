@@ -1,6 +1,9 @@
 {
   "name": "uptimer",
-  "version": "1.0.0",
+  "version": "1.0.0", 
+  "engines": {
+    "node": "8.x"
+  },
   "description": "A library for managing monitors via the Uptime Robot API.",
   "main": "index.js",
   "scripts": {
@@ -17,6 +20,7 @@
   },
   "homepage": "https://github.com/nsmeds/uptimer#readme",
   "dependencies": {
+    "dotenv": "^4.0.0",
     "express": "^4.15.3",
     "node-cron": "^1.2.0",
     "request": "^2.81.0"
