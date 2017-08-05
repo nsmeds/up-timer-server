@@ -6,6 +6,7 @@ const port = process.env.PORT || 3003;
 const server = http.createServer(app);
 
 app.getMonitors();
+
 server.listen(port, () => {
     console.log('server running on', server.address());
 });
