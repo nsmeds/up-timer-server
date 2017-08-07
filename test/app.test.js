@@ -1,24 +1,30 @@
+require('dotenv').config();
 const mocha = require('mocha');
 const assert = require('chai').assert;
 const app = require('../lib/app');
-const monitors = require('../lib/monitors');
+const testId = process.env.PORTAMENTOID;
 
 describe('upTimer api', function() {
-
-    before(() => app.getMonitors());
     
     it('gets all monitors', function() {
         return app.getMonitors()
             .then(res => {
-                console.log('res', res);
-                assert.include(res, monitors.portamentoId);
+                assert.include(JSON.stringify(res), testId);
             });
     });
 
-    it('starts a monitor', function(done) {
-        app.resume(monitors.portamentoId);
-        assert.equal('hi', 'hi');
-        done();
+    it('pauses a monitor', function() {
+        return app.pause(testId)
+            .then(res => {
+                assert.include(res, 'was paused');
+            });
+    });
+
+    it('starts a monitor', function() {
+        return app.resume(testId)
+            .then(res => {
+                assert.include(res, 'was resumed');
+            });
     });
 
 });

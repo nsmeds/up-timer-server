@@ -1,3 +1,4 @@
+require('dotenv').config();
 const app = require('./lib/app');
 const http = require('http');
 const cron = require('./lib/cron')();
