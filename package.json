@@ -1,6 +1,6 @@
 {
-  "name": "uptimer",
-  "version": "1.0.0",
+  "name": "uptimers",
+  "version": "0.1.0",
   "engines": {
     "node": "8.x"
   },
@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nsmeds/uptimer.git"
+    "url": "git+https://github.com/nsmeds/uptimers.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nsmeds/uptimer/issues"
+    "url": "https://github.com/nsmeds/uptimers/issues"
   },
-  "homepage": "https://github.com/nsmeds/uptimer#readme",
+  "homepage": "https://github.com/nsmeds/uptimers#readme",
   "dependencies": {
     "dotenv": "^4.0.0",
     "express": "^4.15.3",

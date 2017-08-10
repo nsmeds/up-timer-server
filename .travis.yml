@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - '8'
+install:
+- npm install
+script: 
+- npm test
 env:
   global:
   - secure: X39LdaYBckvjMXnHJRC7S/c8HiSMK1fB+Tar1AH+LcADKk8945j4zBdyBV/z2303g8Hf26mPx+vF8jH3clvqrnEaYLWDIlm4Sk02zVZatSECWIENyoCuL/fJFn1AZj8l+czLrZwNQHa8uWRPtp+RSAS66Il7aMqiHyDhNvRKe16u59XjZiCPhtZdtBry7fSWqK6ArtaZehfbeRqbMq9LeuyA1pCnTwjuCNo/6L4NDZnKUTa2SHcZ0pb8WuM23pnfy8AiZw5urrm+OttdNWKAtm/gMJA50T38iLyFudF3wOWxWqCbfOullTj+iEjWB+C6/ZI+rPYtsY1G2YUeNxDKeYWy+eiJnrP1b5WcWW6sSgivUZd7g6Qz6AVbIfp4xREJl0j5LdegZH0WDOj5ByR7OrKrUD+PFIfkh07EMxe4DOWetG+p5XlFdcwV0WBqDjr76/iI+H+H3DAX//zj4B5sL2KDy3qxBp1/Fq0TEnat6CpvzpVLfZ5va72hdlWWujGriEoeMuaQw8mdG9LrhVAcz8u4GJ+dlR2mmjTVD0rHuW+tE7KoVH/Te3xu9FxV4vY+7QLQv9E4KJFlqSvY8cFNi+dAv8C7dnsyJNpOwNwqAa9YIdK9M1UU2U6QQmdu1fqZPoy1zC12WjTr3fSdx92dsnMojwlnwb3tHGwCTIWU6UA=
