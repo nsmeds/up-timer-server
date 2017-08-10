@@ -1,6 +1,6 @@
 # Uptimer [![Build Status](https://travis-ci.org/nsmeds/uptimer.svg?branch=master)](https://travis-ci.org/nsmeds/uptimer)
 
-A JavaScript library for managing monitors via the Uptime Robot API. Written with Node.js version 8.
+A JavaScript library for managing monitors via the Uptime Robot API. Written with Node.js version 8 for the current [Uptime Robot APIv2](https://uptimerobot.com/api).
 
 ## Features
 Current features include retrieving, pausing, resuming and scheduling monitors.
