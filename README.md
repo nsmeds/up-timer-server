@@ -6,4 +6,18 @@ A JavaScript library for managing monitors via the Uptime Robot API. Written wit
 Current features include retrieving, pausing, resuming and scheduling monitors.
 
 ## Installation
-Clone or fork repo, `npm install` dependencies, `npm start` to start development server and `npm test` to run tests. Monitor IDs should be stored as environment variables.
+Clone or fork repo, `npm install` dependencies and `npm test` to run tests. An optional development server with cron capabilities can be run via `npm start`.
+
+## Example usage
+Get an API key from [Uptime Robot](https://uptimerobot.com/api) and either pass it to your instantiation function or store it as an environment variable named UPTIMER.
+```javascript
+const Uptimer = require('./uptimer');
+const client = new Uptimer('myAPIkey'); // if UPTIMER env var exists, this function can be called without arguments
+
+client.getMonitors(); // Get all your Uptime Robot monitors. 
+client.listMonitors(); // Get all monitors and list by ID, name and status.
+client.pauseAll(); // Pause monitors.
+client.resumeAll(); // Resume monitors.
+client.pause(monitorId) // Pause a single monitor.
+client.resume(monitorId) // Resume a single monitor.
+```
