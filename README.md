@@ -10,7 +10,7 @@ Clone or fork repo, `npm install` dependencies and `npm test` to run tests. An o
 
 ## Example usage
 Get an API key from [Uptime Robot](https://uptimerobot.com/api) and either pass it to your instantiation function or store it as an environment variable named UPTIMER.
-```
+```javascript
 const Uptimer = require('./uptimer');
 const client = new Uptimer('myAPIkey'); // if UPTIMER env var exists, this function can be called without arguments
 
