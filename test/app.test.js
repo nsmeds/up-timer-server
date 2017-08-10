@@ -1,12 +1,18 @@
 require('dotenv').config();
 const mocha = require('mocha');
 const assert = require('chai').assert;
-const Uptimer = require('../lib/uptimer');
-const app = new Uptimer();
-const testId = process.env.PORTAMENTOID;
 
 describe('upTimer api', function() {
-    
+    const Uptimer = require('../lib/uptimer');
+    const app = new Uptimer();
+    let testId;
+
+    before(() => {
+        // get an existing monitor id to use for our tests
+        return app.getMonitors()
+            .then(res => testId = (Object.keys(res)[0]));
+    });
+
     it('gets all monitors', function() {
         return app.getMonitors()
             .then(res => {
@@ -21,6 +27,10 @@ describe('upTimer api', function() {
             });
     });
 
+    it('throws error when no id passed to pause', function() {
+        assert.throws(app.pause, 'This function must be called with a monitor ID.');
+    });
+
     it('starts a monitor', function() {
         return app.resume(testId)
             .then(res => {
@@ -28,6 +38,22 @@ describe('upTimer api', function() {
             });
     });
 
-    after(() => app.resumeAll());
+    it('throws error when no id passed to pause', function() {
+        assert.throws(app.resume, 'This function must be called with a monitor ID.');
+    });
+
+    it('pauses all monitors', function() {
+        return app.pauseAll()
+            .then(res => {
+                res.map(message => assert.include(message, 'was paused'));
+            });
+    });
+
+    it('resumes all monitors', function() {
+        return app.resumeAll()
+            .then(res => {
+                res.map(message => assert.include(message, 'was resumed'));
+            });
+    });
 
 });
