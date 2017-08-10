@@ -1,6 +1,8 @@
+.DS_Store
 DS_Store
 node_modules
 monitors.js
 .vscode
 .env
 todo.js
+tester.js

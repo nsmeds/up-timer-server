@@ -1,8 +1,8 @@
 require('dotenv').config();
 const mocha = require('mocha');
 const assert = require('chai').assert;
-const app = require('../lib/app');
-const resumeAll = require('../lib/resume')
+const Uptimer = require('../lib/uptimer');
+const app = new Uptimer();
 const testId = process.env.PORTAMENTOID;
 
 describe('upTimer api', function() {
@@ -28,6 +28,6 @@ describe('upTimer api', function() {
             });
     });
 
-    after(() => resumeAll());
+    after(() => app.resumeAll());
 
 });
