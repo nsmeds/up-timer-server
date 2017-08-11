@@ -2,8 +2,8 @@ require('dotenv').config();
 const mocha = require('mocha');
 const assert = require('chai').assert;
 
-describe('upTimers api', function() {
-    const Uptimer = require('../lib/uptimers');
+describe('uptimer api', function() {
+    const Uptimer = require('../lib/uptimer');
     const app = new Uptimer();
     let testId;
 

@@ -1,4 +1,4 @@
-# Uptimers [![Build Status](https://travis-ci.org/nsmeds/uptimers.svg?branch=master)](https://travis-ci.org/nsmeds/uptimers)
+# Up-timer [![Build Status](https://travis-ci.org/nsmeds/up-timer.svg?branch=master)](https://travis-ci.org/nsmeds/up-timer)
 
 A JavaScript library for managing monitors via the Uptime Robot API. Written with Node.js version 8 for the current [Uptime Robot APIv2](https://uptimerobot.com/api).
 
@@ -11,7 +11,7 @@ Clone or fork repo, `npm install` dependencies and `npm test` to run tests. An o
 ## Example usage
 Get an API key from [Uptime Robot](https://uptimerobot.com/api) and either pass it to your instantiation function or store it as an environment variable named UPTIMER.
 ```javascript
-const Uptimer = require('./uptimers');
+const Uptimer = require('./up-timer');
 const client = new Uptimer('myAPIkey'); // if UPTIMER env var exists, this function can be called without arguments
 
 client.getMonitors(); // Get all your Uptime Robot monitors. 

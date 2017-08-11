@@ -1,1 +1,1 @@
-module.exports = require('./lib/uptimers');
+module.exports = require('./lib/uptimer');
