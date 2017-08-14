@@ -20,6 +20,8 @@ client.getMonitors(); // Get all your Uptime Robot monitors.
 client.listMonitors(); // Get all monitors and list by ID, name and status.
 client.pauseAll(); // Pause monitors.
 client.resumeAll(); // Resume monitors.
-client.pause(monitorId) // Pause a single monitor.
-client.resume(monitorId) // Resume a single monitor.
+client.create('name', 'url', 'method'); // Create a monitor. Name is up to you. Url must be a valid url. Method can be 'http', 'https', 'keyword', 'ping' or 'port'.
+client.pause('monitorId') // Pause a single monitor.
+client.resume('monitorId') // Resume a single monitor.
+client.delete('monitorId') // Delete a single monitor.
 ```
