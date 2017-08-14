@@ -28,7 +28,7 @@ describe('uptimer api', function() {
     });
     
     it('creates a monitor', function() {
-        return app.create(testName, `https://www.test.com/${testName}`, 'http')
+        return app.create(testName, `https://www.test.com/${testName}`, 'https')
             .then(res => {
                 assert.ok(res.id);
                 testId = res.id;
